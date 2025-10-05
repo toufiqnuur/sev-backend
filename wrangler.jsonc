@@ -1,0 +1,26 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "sev-backend",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-09-30",
+  "compatibility_flags": ["nodejs_compat"],
+  "vars": {
+    "DATABASE_URL": "<YOUR_DATABASE_URL>",
+
+    // JWT
+    "JWT_SECRET": "<YOUR_JWT_SECRET>",
+    "DOMAIN": "<YOUR_DOMAIN>",
+    "API_URL": "YOUR_API_URL",
+    "FRONTEND_URL": "<YOUR_FRONTEND_URL>",
+
+    // OAuth
+    "GITHUB_CLIENT_ID": "<YOUR_GITHUB_CLIENT_ID>",
+    "GITHUB_CLIENT_SECRET": "<YOUR_GITHUB_CLIENT_SECRET>",
+    "GOOGLE_CLIENT_ID": "<YOUR_GOOGLE_CLIENT_ID>",
+    "GOOGLE_CLIENT_SECRET": "<YOUR_GOOGLE_CLIENT_SECRET>",
+  },
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1,
+  },
+}
